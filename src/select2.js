@@ -231,7 +231,7 @@ angular.module('ui.select2', []).value('uiSelect2Config', {}).directive('uiSelec
               }
             elm.prev().toggleClass('ng-pristine', controller.$pristine);
           }
-        });
+        }, 101); // value which is greater than timeouts in select2 implementation (added to prevent losing of values set on page init)
       };
     }
   };
